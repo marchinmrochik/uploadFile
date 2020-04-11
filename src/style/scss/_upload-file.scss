@@ -1,0 +1,110 @@
+.container {
+  max-width: 400px;
+  background: $white;
+  border: 1px solid $selago;
+}
+
+.header {
+  padding: 21px 24px 18px 29px;
+  border-bottom: 1px solid $selago;
+
+  &__title {
+    @include ff__ProximaNovaBold;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    color: $mirage;
+  }
+
+  &__subtitle {
+    @include ff__ProximaNovaNormal;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+    color: $bermuda-gray;
+  }
+}
+
+.body {
+  padding: 19px 20px;
+}
+
+.box {
+  &__img {
+    width: 80px;
+    height: 80px;
+    clip-path: circle(50% at 50% 50%);
+    background: $white;
+    border-radius: 50%;
+    border: 1px solid $tropical-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: none;
+    }
+  }
+
+  &__process {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include ff__ProximaNovaNormal;
+    font-size: 12px;
+    line-height: 12px;
+
+    p {
+      color: $san-juan;
+      margin: 9px 10px;
+    }
+
+    span {
+      color: $bermuda-gray;
+    }
+
+    label {
+      color: $picton-blue;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.block {
+  &__drop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 470px;
+    border: 1px dashed $white;
+
+    &_hover {
+      background: $zircon;
+      border: 1px dashed $picton-blue;
+    }
+
+    &_error {
+      background: rgba($red-orange, 0.15);
+      border: 1px dashed $picton-blue;
+    }
+  }
+}
+
+#fileUpload {
+  display: none;
+}
+
+.progress__ring {
+  position: absolute;
+}
+
+circle {
+  transition: stroke-dashoffset 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
